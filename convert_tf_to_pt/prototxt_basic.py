@@ -4,7 +4,7 @@ import logging
 logging.basicConfig(level = logging.INFO)
 
 def data(txt_file, info):
-  txt_file.write('name: "mxnet2caffe"\n')
+  txt_file.write('name: "efficientnet_pytorch2caffe"\n')
   txt_file.write('layer {\n')
   txt_file.write('  name: "data"\n')
   txt_file.write('  type: "Input"\n')

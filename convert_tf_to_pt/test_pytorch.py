@@ -6,7 +6,11 @@ from PIL import Image
 from model import *
 from torchvision import transforms
 
-model = get_from_pretrained('efficientnet-b0')
+if not len(sys.argv) == 2:
+  sys.exit("too less argc : model name is needed! -> efficientnet-b0/efficientnet-b1/efficientnet-b2/efficientnet-b3")
+
+model_name = sys.argv[1]
+model = get_from_pretrained(model_name)
 
 tfms = transforms.Compose([transforms.Resize((224,224)), transforms.ToTensor(),
     transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225]),])
