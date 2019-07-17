@@ -1,3 +1,9 @@
+### build
+  * pip install tensorflow torch torchvision
+  * pip3 install tensorflow torch torchvision
+  * git clone https://github.com/xxworkspace/caffe.git
+    * Then build caffe width cpu-only
+
 ### TensorFlow to PyTorch Conversion
   * Download tf-model
     * cd pretrained_tensorflow
@@ -7,7 +13,7 @@
     * python3 convert_params_tf_pytorch.py --model_name efficientnet-b0 --tf_checkpoint ../pretrained_tensorflow/efficientnet-b0/ --output_file ../pretrained_pytorch/efficientnet-b0.pth
       * Using python3 convert_params_tf_pytorch.py -h
   * Test
-    * python test_pytorch.py
+    * python test_pytorch.py efficientnet-b0*
 
 ### PyTorch to Caffe
   * Convert pytorch-model to caffe .prototxt
